@@ -10,22 +10,22 @@ stages:
   jobs:
   - job: FirstJob
     steps:
-    - bash: echo Build FirstJob
+    - powershell: echo "Build FirstJob"
   - job: SecondJob
     steps:
-    - bash: echo Build SecondJob
+    - powershell: echo "Build SecondJob"
 - stage: Dev
   jobs:
   - job: DevDeployJob
     steps:
-    - bash: echo Build DevDeployJob
+    - powershell: echo "Build DevDeployJob"
 - stage: QA
   jobs:
   - job: QADeployJob
     steps:
-    - bash: echo Build QADeployJob
+    - powershell: echo "Build QADeployJob"
 - stage: Prod
   jobs:
   - job: ProdDeployJob
     steps:
-    - bash: echo Build ProdDeployJob
+    - powershell: echo "Build ProdDeployJob"
