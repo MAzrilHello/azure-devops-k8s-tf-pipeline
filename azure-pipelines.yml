@@ -11,7 +11,7 @@ pool:
   name: Default
 
 steps:
-- script: echo "Hello from $(Agent.Name)"
+- script: echo "Hello from $(Agent.Name) v2"
   displayName: 'Run a one-line script'
 
 - script: |
