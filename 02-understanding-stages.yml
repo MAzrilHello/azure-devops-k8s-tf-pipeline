@@ -11,21 +11,35 @@ stages:
   - job: FirstJob
     steps:
     - powershell: echo "Build FirstJob"
+    - powershell: echo $(PipelineLevelVariable)Job
   - job: SecondJob
     steps:
     - powershell: echo "Build SecondJob"
+    - powershell: echo $(PipelineLevelVariable)Job
 - stage: Dev
+  variables:
+    environment: Dev
   jobs:
   - job: DevDeployJob
     steps:
     - powershell: echo "Build DevDeployJob"
+    - powershell: echo $(PipelineLevelVariable)Job
+
 - stage: QA
+  variables:
+    environment: QA
   jobs:
   - job: QADeployJob
     steps:
     - powershell: echo "Build QADeployJob"
+    - powershell: echo $(PipelineLevelVariable)Job
+
 - stage: Prod
+  variables:
+    environment: Prod
   jobs:
   - job: ProdDeployJob
     steps:
     - powershell: echo "Build ProdDeployJob"
+    - powershell: echo $(PipelineLevelVariable)Job
+
