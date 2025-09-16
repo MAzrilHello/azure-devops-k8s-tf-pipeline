@@ -3,8 +3,8 @@ trigger:
 
 pool:
 #  vmImage: ubuntu-latest
-  name： default
-
+  name: Default
+  
 stages: 
 - stage: Build
   jobs:
